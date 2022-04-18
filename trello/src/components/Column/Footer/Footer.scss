@@ -1,0 +1,12 @@
+.footer-container {
+    .input-field {
+        border: 0;
+        background-color: white;
+
+        &:focus {
+            background-color: rgb(211, 211, 211);
+            border: 0;
+            border-color: rgb(211, 211, 211);
+        }
+    }
+}

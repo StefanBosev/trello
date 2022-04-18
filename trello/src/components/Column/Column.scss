@@ -2,43 +2,47 @@ $gap: 10px;
 $footer-height: 36px;
 $header-height: 36px;
 
-> * {
-    background-color: white;
-    color: #333;
-    padding: 0 8px;
-}
-  
-header {
-    height: 36px;
-    line-height: 36px;
-    padding-left: 10  px;
-    font-size: 16px;
-    font-weight: bold;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom: 0;
-  }
+.column {
+    flex: 0 0 auto;
+    width: 300px;
+    height: calc(100% - #{$gap});
+    margin-left: 10px;
 
-  footer {
-    height: 36px;
-    line-height: 36px;
-    padding-left: 10px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin-top: 0;
-  }
-
-  ul {
-    list-style-type: none;
-    max-height: calc(100% - #{$header-height} - #{$footer-height});
-    overflow-y: auto;
-    margin: 0;
-
-    li {
-      background-color: white;
-      margin-bottom: 5px;
-      padding: 10px;
-      background-color: bisque;
-      border-radius: 3px;
+    &:last-of-type(.column) {
+      margin-right: 10px;
     }
-  }    
+
+    > * {
+      background-color: white;
+      color: #333;
+      padding: 0 8px;
+    }
+    
+    header {
+      height: 36px;
+      line-height: 36px;
+      padding-left: 10  px;
+      font-size: 16px;
+      font-weight: bold;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-bottom: 0;
+    }
+  
+    footer {
+      height: 36px;
+      line-height: 36px;
+      padding-left: 10px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      margin-top: 0;
+    }
+  
+    ul {
+      list-style-type: none;
+      max-height: calc(100% - #{$header-height} - #{$footer-height});
+      overflow-y: auto;
+      margin: 0;
+  
+    }
+}

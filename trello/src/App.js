@@ -1,24 +1,19 @@
-import { useState } from 'react';
 import './App.scss';
-import Column from './components/Column/Column.js'
+import Navbar from './components/Navbar/Navbar';
+import Board from './components/Board/Board';
+import { useState } from 'react';
 
 function App() {
+  const [boards, setBoards] = useState([Board])
 
-  const [components, setComponents] = useState([Column])
-
-  function addColumn() {
-    setComponents([...components, Column])
+  function newBoard() {
+      setBoards([...boards, Board])
   }
 
   return (
     <div className="trello">
-      <nav className="app-navbar">
-        Navbar  
-      </nav>
-      <div id="cardHolder" className="board">
-        {components.map((item, i) => (<Column />))}
-        <button id="addButton" className="add-column-button" onClick={addColumn}>+ Add another list</button>
-      </div>
+      <Navbar newBoardFunc={newBoard}/>
+      <Board id="board"/>
     </div>
   );
 }
