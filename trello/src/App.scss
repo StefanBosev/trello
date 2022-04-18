@@ -21,7 +21,7 @@ body {
 
 .app-navbar {
   font-size: larger;
-  background-color: aqua;
+  background-color: #0088ff;
   padding-bottom: $gap;
 }
 
@@ -35,6 +35,11 @@ body {
     flex: 0 0 auto;
     width: 300px;
     height: calc(100% - #{$gap});
+    margin-left: 10px;
+
+    &:last-of-type(.column) {
+      margin-right: 10px;;
+    }
     
     > * {
       background-color: white;
@@ -75,8 +80,18 @@ body {
         background-color: bisque;
         border-radius: 3px;
       }
-    }
-
-    
+    }    
   }
+}
+
+.add-column-button {
+  background-color: #7a7a7a;
+  opacity: 80%;
+  width: 300px;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  text-align: left;
+  box-shadow: 0 0 0 0;
 }
